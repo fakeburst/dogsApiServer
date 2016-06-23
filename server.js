@@ -16,8 +16,8 @@ if (typeof address === "undefined") {
 
 var router = express.Router();  
 
-router.get('/', function(req, res) {  
-	res.send("ayy lmao aup");
+app.get('/', function(req, res) {  
+	res.send("Api is running");
 });
 
 router.use(function(req, res, next) {
