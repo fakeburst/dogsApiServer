@@ -16,14 +16,6 @@ if (typeof address === "undefined") {
 
 var router = express.Router();  
 
-/*var dogsKeys = (Object.keys(dogs));
-for(var i = 0; i < dogsKeys.length; i++){
-	var keyArray = dogs[dogsKeys[i]];
-	for(var j = 0; j < keyArray.length; j++){
-		keyArray[j].name = dogNames.allRandom();
-	}
-}*/
-
 router.get('/', function(req, res) {  
 	res.send("ayy lmao aup");
 });
@@ -46,23 +38,21 @@ router.route('/dog/image')
 		} else {
 			if(req.query.breed){
 				dog = api.getDogByBreed(req.query.breed);
-				//console.log(dog);
 				if(!dog){
 					res.status(404);
 					res.send({ error: 'No such breed' });
-					console.log("Breed Error")
+					console.log("Breed Error");
+					return;
 				}
-				return;
 			}
 			if(req.query.age){
 				dog = api.getDogByAge(req.query.age);
-				//console.log(dog);
 				if(!dog){
 					res.status(404);
 					res.send({ error: 'No such age' });
 					console.log("Age Error")
+					return;
 				}
-				return;
 			}
 		}
 		if(req.query.raw){
