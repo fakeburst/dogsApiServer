@@ -23,11 +23,37 @@ exports.getDogByAge = function(age){
 
 exports.getDogByAgeAndBreed = function(age, breed){
 	var tmp = ages[age];
+	shuffle(tmp);
+	var res;
 	tmp.forEach(function(dog){
 		if(dog.breed === breed){
-			tmp = dog;
-			return;
+			res = dog;
+			return res;
 		}
 	});
-	return tmp;
+	console.log(res);
+	return res;
+}
+
+exports.maleNameRandom = function(){
+	return dogNames.maleRandom();
+}
+
+exports.femaleNameRandom = function(){
+	return dogNames.femaleRandom();
+}
+
+exports.nameRandom = function(){
+	return dogNames.allRandom();
+}
+
+
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i -= 1) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
 }

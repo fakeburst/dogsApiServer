@@ -29,7 +29,7 @@ router.route('/dog/image')
 	.get(function(req, res) {
 		var dog;
 		if(req.query.age && req.query.breed){
-			dog.getDogByAgeAndBreed(req.query.age, req.query.breed);
+			dog = api.getDogByAgeAndBreed(req.query.age, req.query.breed);
 			if(!dog){
 				res.status(404);
 				res.send({ error: 'No such age or breed' });
@@ -55,18 +55,21 @@ router.route('/dog/image')
 				}
 			}
 		}
-		if(req.query.raw){
-			dog = api.getRandDog();
-			if(req.query.raw === 'src')
-				res.send(dog.url);
-			if(req.query.raw === 'html')
-				res.send('<img src="' + dog.url + '">');
-		}
 		if(!dog){
 			dog = api.getRandDog();
 		}
 		if(req.query.name){
 			dog.name = dogNames.allRandom();
+		}
+		if(req.query.raw){
+			if(req.query.raw === 'src'){
+				res.send(dog.url);
+				return;
+			}
+			if(req.query.raw === 'html'){
+				res.send('<img src="' + dog.url + '">');
+				return;
+			}
 		}
 		res.json(dog);
 	})
@@ -77,13 +80,13 @@ router.route('/dog/name')
 		if(req.query.gender){
 			switch(req.query.gender){
 				case "male":
-					dogName = dogNames.maleRandom();
+					dogName = api.maleNameRandom();
 					break;
 				case "female":
-					dogName = dogNames.femaleRandom();
+					dogName = api.femaleNameRandom();
 					break;
 				case "all":
-					dogName = dogNames.allRandom();
+					dogName = api.nameRandom();
 				default:
 					res.status(404);
 					res.send({ error: 'No such gender' });
@@ -102,4 +105,3 @@ app.listen(port, address, function(){
 	 console.log('%s: Node server started on %s:%d ...', Date(Date.now() ), address, port);
 });
 console.log('Magic happens on port ' + port);
-
