@@ -1,4 +1,25 @@
-"scripts": {
-  "start": "node server.js"
-},
-"main": "server.js"
+{
+  "name": "dogsApiServer",
+  "version": "1.0.0",
+  "author": {
+    "name": "UHA",
+  },
+  "homepage": "http://dogsapi-fakeburst.rhcloud.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fakeburst/dogsApiServer"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dog-names": "^1.0.2",
+    "express": "^3.21.2"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "main": "server.js"
+}

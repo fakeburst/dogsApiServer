@@ -3,10 +3,16 @@ var app        = express();
 var bodyParser = require('body-parser');
 var dogNames = require('dog-names');
 var api = require('./dogs');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = 8080;
+var address = process.env.OPENSHIFT_NODEJS_IP;
+var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+
+if (typeof self.ipaddress === "undefined") {
+	self.ipaddress = "127.0.0.1";
+};
 
 var router = express.Router();  
 
@@ -101,6 +107,8 @@ router.route('/dog/name')
 
 app.use('/api', router);
 
-app.listen(port);
+app.listen(port, address, function(){
+	 console.log('%s: Node server started on %s:%d ...', Date(Date.now() ), address, port);
+});
 console.log('Magic happens on port ' + port);
 
