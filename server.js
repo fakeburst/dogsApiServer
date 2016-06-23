@@ -25,6 +25,7 @@ for(var i = 0; i < dogsKeys.length; i++){
 }*/
 
 router.get('/', function(req, res) {  
+	res.send("ayy lmao aup");
 });
 
 router.use(function(req, res, next) {
