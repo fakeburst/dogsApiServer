@@ -1,0 +1,71 @@
+{
+	"poodle": [{
+		"breed": "poodle",
+		"age": "old",
+		"colour": "black",
+		"url": "http://bit.ly/28Qtlcw"
+	}, {
+		"breed": "poodle",
+		"age": "young",
+		"colour": "black",
+		"url": "http://bit.ly/1J5SfQt"
+	}, {
+		"breed": "poodle",
+		"age": "young",
+		"colour": "white",
+		"url": "http://bit.ly/28N0zud"
+	}],
+	"chihuahua": [{
+		"breed": "chihuahua",
+		"age": "young",
+		"colour": "brown",
+		"url": "http://bit.ly/28MNsp1"
+	}, {
+		"breed": "chihuahua",
+		"age": "puppy",
+		"colour": "mixed",
+		"url": "http://bit.ly/28O9Y63"
+	}, {
+		"breed": "chihuahua",
+		"age": "young",
+		"colour": "mixed",
+		"url": "http://bit.ly/28MoIwp"
+	}],
+	"german_shepherd": [{
+		"breed": "german_shepherd",
+		"age": "old",
+		"colour": "mixed",
+		"url": "http://bit.ly/28VLsg2"
+	}, {
+		"breed": "german_shepherd",
+		"age": "puppy",
+		"colour": "black",
+		"url": "http://bit.ly/28NbEsN"
+	}, {
+		"breed": "german_shepherd",
+		"age": "old",
+		"colour": "mixed",
+		"url": "http://bit.ly/28OGzXN"
+	}],
+	"akita": [{
+		"breed": "akita",
+		"age": "puppy",
+		"colour": "brown",
+		"url": "http://bit.ly/28MPfu8"
+	}, {
+		"breed": "akita",
+		"age": "old",
+		"colour": "mixed",
+		"url": "http://bit.ly/1T0Gv4B"
+	}, {
+		"breed": "akita",
+		"age": "young",
+		"colour": "mixed",
+		"url": "http://bit.ly/28OHDfj"
+	}, {
+		"breed": "akita",
+		"age": "young",
+		"colour": "mixed",
+		"url": "http://bit.ly/18V3JH5"
+	}]
+}
