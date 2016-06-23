@@ -47,9 +47,9 @@ router.route('/dog/image')
 			if(req.query.breed){
 				dog = api.getDogByBreed(req.query.breed);
 				//console.log(dog);
-				res.status(404);
-				res.send({ error: 'No such breed' });
 				if(!dog){
+					res.status(404);
+					res.send({ error: 'No such breed' });
 					console.log("Breed Error")
 				}
 				return;
@@ -57,9 +57,9 @@ router.route('/dog/image')
 			if(req.query.age){
 				dog = api.getDogByAge(req.query.age);
 				//console.log(dog);
-				res.status(404);
-				res.send({ error: 'No such age' });
 				if(!dog){
+					res.status(404);
+					res.send({ error: 'No such age' });
 					console.log("Age Error")
 				}
 				return;
