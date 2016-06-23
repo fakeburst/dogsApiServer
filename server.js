@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 var address = process.env.OPENSHIFT_NODEJS_IP;
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-if (typeof self.ipaddress === "undefined") {
-	self.ipaddress = "127.0.0.1";
-};
+if (typeof address === "undefined") {
+	address = "127.0.0.1";
+}
 
 var router = express.Router();  
 
