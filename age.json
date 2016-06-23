@@ -1,70 +1,260 @@
 {
 	"old": [{
-		"colour": "mixed",
-		"breed": "akita",
+		"colour": ["white"],
+		"breed": "tibetan_mastiff",
 		"age": "old",
-		"url": "http://bit.ly/1T0Gv4B"
+		"url": "http://bit.ly/28TxaPR"
 	}, {
-		"colour": "black",
+		"colour": ["white", "brown"],
+		"breed": "rough_collie",
+		"age": "old",
+		"url": "http://bit.ly/290zjp6"
+	}, {
+		"colour": ["black"],
 		"breed": "poodle",
 		"age": "old",
 		"url": "http://bit.ly/28Qtlcw"
 	}, {
-		"colour": "mixed",
+		"colour": ["white", "light-brown"],
+		"breed": "labrador_retriever",
+		"age": "old",
+		"url": "http://bit.ly/28QEuHF"
+	}, {
+		"colour": ["grey", "white", "black"],
+		"breed": "siberian_husky",
+		"age": "old",
+		"url": "http://bit.ly/28QN9tu"
+	}, {
+		"colour": ["white", "light-brown"],
+		"breed": "akita",
+		"age": "old",
+		"url": "http://bit.ly/1T0Gv4B"
+	}, {
+		"colour": ["white", "brown"],
+		"breed": "bulldog",
+		"age": "old",
+		"url": "http://bit.ly/28Q7GlQ"
+	}, {
+		"colour": ["white", "black", "brown"],
+		"breed": "beagle",
+		"age": "old",
+		"url": "http://bit.ly/28TsI3M"
+	}, {
+		"colour": ["brown", "white", "black"],
+		"breed": "st_bernard",
+		"age": "old",
+		"url": "http://bit.ly/28TrpBg"
+	}, {
+		"colour": ["brown", "white", "black"],
+		"breed": "st_bernard",
+		"age": "old",
+		"url": "http://bit.ly/28S8EiN"
+	}, {
+		"colour": ["black", "brown"],
 		"breed": "german_shepherd",
 		"age": "old",
 		"url": "http://bit.ly/28VLsg2"
 	}, {
-		"colour": "mixed",
+		"colour": ["black", "brown", "light-brown"],
 		"breed": "german_shepherd",
 		"age": "old",
 		"url": "http://bit.ly/28OGzXN"
 	}],
 	"puppy": [{
-		"colour": "brown",
+		"colour": ["brown", "light-brown", "white"],
+		"breed": "rough_collie",
+		"age": "puppy",
+		"url": "http://bit.ly/28QINCm"
+	}, {
+		"colour": ["light-brown"],
+		"breed": "rough_collie",
+		"age": "puppy",
+		"url": "http://bit.ly/28Q9nQa"
+	}, {
+		"colour": ["white"],
+		"breed": "labrador_retriever",
+		"age": "puppy",
+		"url": "http://bit.ly/290mf2U"
+	}, {
+		"colour": ["brown", "black"],
+		"breed": "dachshund",
+		"age": "puppy",
+		"url": "http://bit.ly/28TwklK"
+	}, {
+		"colour": ["white"],
+		"breed": "siberian_husky",
+		"age": "puppy",
+		"url": "http://bit.ly/28Qc5oC"
+	}, {
+		"colour": ["light-brown", "white", "black"],
 		"breed": "akita",
 		"age": "puppy",
 		"url": "http://bit.ly/28MPfu8"
 	}, {
-		"colour": "mixed",
+		"colour": ["brown", "pink"],
+		"breed": "bulldog",
+		"age": "puppy",
+		"url": "http://bit.ly/28TsxFe"
+	}, {
+		"colour": ["white", "black", "brown"],
+		"breed": "beagle",
+		"age": "puppy",
+		"url": "http://bit.ly/28TsmKo"
+	}, {
+		"colour": ["black", "white"],
 		"breed": "chihuahua",
 		"age": "puppy",
 		"url": "http://bit.ly/28O9Y63"
 	}, {
-		"colour": "black",
+		"colour": ["black", "brown"],
+		"breed": "doberman",
+		"age": "puppy",
+		"url": "http://bit.ly/28TpPj3"
+	}, {
+		"colour": ["brown", "white", "black"],
+		"breed": "st_bernard",
+		"age": "puppy",
+		"url": "http://bit.ly/28TUTNZ"
+	}, {
+		"colour": ["white", "black"],
+		"breed": "st_bernard",
+		"age": "puppy",
+		"url": "http://bit.ly/28OKhOP"
+	}, {
+		"colour": ["black", "light-brown"],
 		"breed": "german_shepherd",
 		"age": "puppy",
 		"url": "http://bit.ly/28NbEsN"
 	}],
 	"young": [{
-		"colour": "mixed",
-		"breed": "akita",
+		"colour": ["black"],
+		"breed": "tibetan_mastiff",
 		"age": "young",
-		"url": "http://bit.ly/28OHDfj"
+		"url": "http://bit.ly/28QcYfw"
 	}, {
-		"colour": "mixed",
-		"breed": "akita",
+		"colour": ["black", "light-brown"],
+		"breed": "tibetan_mastiff",
 		"age": "young",
-		"url": "http://bit.ly/18V3JH5"
+		"url": "http://bit.ly/28Q2Nor"
 	}, {
-		"colour": "black",
+		"colour": ["white", "brown"],
+		"breed": "rough_collie",
+		"age": "young",
+		"url": "http://bit.ly/28SamAC"
+	}, {
+		"colour": ["brown", "light-brown", "white"],
+		"breed": "rough_collie",
+		"age": "young",
+		"url": "http://bit.ly/28PUkkx"
+	}, {
+		"colour": ["black"],
 		"breed": "poodle",
 		"age": "young",
 		"url": "http://bit.ly/1J5SfQt"
 	}, {
-		"colour": "white",
+		"colour": ["white"],
 		"breed": "poodle",
 		"age": "young",
 		"url": "http://bit.ly/28N0zud"
 	}, {
-		"colour": "brown",
+		"colour": ["light-brown"],
+		"breed": "labrador_retriever",
+		"age": "young",
+		"url": "http://bit.ly/28PNQCo"
+	}, {
+		"colour": ["chocolate"],
+		"breed": "labrador_retriever",
+		"age": "young",
+		"url": "http://bit.ly/28VuCzk"
+	}, {
+		"colour": ["brown"],
+		"breed": "dachshund",
+		"age": "young",
+		"url": "http://bit.ly/28VFEEs"
+	}, {
+		"colour": ["brown"],
+		"breed": "dachshund",
+		"age": "young",
+		"url": "http://bit.ly/290n50G"
+	}, {
+		"colour": ["brown", "black"],
+		"breed": "dachshund",
+		"age": "young",
+		"url": "http://bit.ly/28QJlrX"
+	}, {
+		"colour": ["light-brown"],
+		"breed": "dachshund",
+		"age": "young",
+		"url": "http://eonli.ne/28Q9ZFm"
+	}, {
+		"colour": ["brown", "orange", "white"],
+		"breed": "siberian_husky",
+		"age": "young",
+		"url": "http://bit.ly/28PVTii"
+	}, {
+		"colour": ["grey", "black", "white"],
+		"breed": "siberian_husky",
+		"age": "young",
+		"url": "http://bit.ly/290CZXP"
+	}, {
+		"colour": ["white", "black", "grey"],
+		"breed": "siberian_husky",
+		"age": "young",
+		"url": "http://bit.ly/28QhCKh"
+	}, {
+		"colour": ["brown", "white"],
+		"breed": "akita",
+		"age": "young",
+		"url": "http://bit.ly/28OHDfj"
+	}, {
+		"colour": ["light-brown"],
+		"breed": "akita",
+		"age": "young",
+		"url": "http://bit.ly/18V3JH5"
+	}, {
+		"colour": ["brown", "white"],
+		"breed": "bulldog",
+		"age": "young",
+		"url": "http://bit.ly/28VBBbC"
+	}, {
+		"colour": ["white", "grey", "brown"],
+		"breed": "bulldog",
+		"age": "young",
+		"url": "http://bit.ly/28QGcZj"
+	}, {
+		"colour": ["white", "black", "brown"],
+		"breed": "beagle",
+		"age": "young",
+		"url": "http://bit.ly/28Q5udQ"
+	}, {
+		"colour": ["white", "light-brown"],
+		"breed": "beagle",
+		"age": "young",
+		"url": "http://bit.ly/28Qixug"
+	}, {
+		"colour": ["brown"],
 		"breed": "chihuahua",
 		"age": "young",
 		"url": "http://bit.ly/28MNsp1"
 	}, {
-		"colour": "mixed",
+		"colour": ["light-brown", "white"],
 		"breed": "chihuahua",
 		"age": "young",
 		"url": "http://bit.ly/28MoIwp"
+	}, {
+		"colour": ["black", "brown"],
+		"breed": "doberman",
+		"age": "young",
+		"url": "http://bit.ly/28T289w"
+	}, {
+		"colour": ["black", "brown"],
+		"breed": "doberman",
+		"age": "young",
+		"url": "http://bit.ly/28Q68bn"
+	}, {
+		"colour": ["brown", "white"],
+		"breed": "st_bernard",
+		"age": "young",
+		"url": "http://bit.ly/28VA3OA"
 	}]
 }

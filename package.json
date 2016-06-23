@@ -1,6 +1,6 @@
 {
   "name": "dogsApiServer",
-  "version": "2.2.8",
+  "version": "4.2.0",
   "description": "",
   "main": "server.js",
   "scripts": {
