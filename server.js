@@ -1,11 +1,13 @@
 var express    = require('express');        
 var app        = express();                 
 var bodyParser = require('body-parser');
+var path       = require("path");
 var dogNames = require('dog-names');
 var api = require('./dogs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/Frontend'));
 
 var address = process.env.OPENSHIFT_NODEJS_IP;
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
@@ -17,7 +19,7 @@ if (typeof address === "undefined") {
 var router = express.Router();  
 
 app.get('/', function(req, res) {  
-	res.send("Api is running");
+	res.sendFile(path.join('/index.html'));
 });
 
 router.use(function(req, res, next) {
@@ -31,7 +33,7 @@ router.route('/dog/image')
 		if(req.query.age && req.query.breed){
 			dog = api.getDogByAgeAndBreed(req.query.age, req.query.breed);
 			if(!dog){
-				res.status(404);
+				res.status(400);
 				res.send({ error: 'No such age or breed' });
 				return;
 			}
@@ -39,7 +41,7 @@ router.route('/dog/image')
 			if(req.query.breed){
 				dog = api.getDogByBreed(req.query.breed);
 				if(!dog){
-					res.status(404);
+					res.status(400);
 					res.send({ error: 'No such breed' });
 					console.log("Breed Error");
 					return;
@@ -48,7 +50,7 @@ router.route('/dog/image')
 			if(req.query.age){
 				dog = api.getDogByAge(req.query.age);
 				if(!dog){
-					res.status(404);
+					res.status(400);
 					res.send({ error: 'No such age' });
 					console.log("Age Error")
 					return;
@@ -88,7 +90,7 @@ router.route('/dog/name')
 				case "all":
 					dogName = api.nameRandom();
 				default:
-					res.status(404);
+					res.status(400);
 					res.send({ error: 'No such gender' });
 					console.log("Name Error");
 					return;

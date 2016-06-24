@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Dog API</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      
+    <link href="bootstrap.css" rel="stylesheet">
+      
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>      
+    <div class="navbar navbar-fixed-top ">
+      <div class="navbar-inner ">
+        <div class="container">
+            <a class="brand" href="./index.html">The Dog API</a>
+          
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a  href="./index.html">Where random dogs can be found</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="hero-unit">
+        <h1>Random dog of your random dream</h1>
+		<br>
+          <p><a class="btn btn-primary" onclick="refreshImage();">Refresh</a></p>
+		<p><img id="main_event"  ></p>
+          <div id="main_event_source"></div>
+          <hr size="10">
+          
+          
+          
+          
+          
+          
+          
+          
+          <!----- images/Get --->
+			<section>
+			<div class="page-header">
+			<h1>/api/dog/image<br></h1>
+			</div>
+			<h3>Parameters</h3>
+			<div class="row">
+				<div class="span8">
+				<table class="table table-bordered table-striped">
+				<thead>
+				  <tr>
+					<th>Name</th>
+					<th>Values</th>
+					<th>Required</th>
+					<th>Description</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>age</td>
+					<td>
+					  old / puppy / young
+					</td>
+					<td>No</td>
+					<td>Age of dog to return.</td>
+				  </tr>
+				  <tr>
+					<td>breed</td>
+                      <td><a data-toggle="popover" data-placement="top" data-content="poodle / chihuahua / german_shepherd / akita / labrador_retriever / beagle / doberman / st_bernard / bulldog / tibetan_mastiff / rough_collie / dachshund / siberian_husky">Possible breeds</a></td>
+					<td>No</td>
+					<td>Breed of dog to return.</td>
+				  </tr>
+				  <tr>
+					<td>name</td>
+					<td>
+					  name
+					</td>
+					<td>No</td>
+					<td>The name of dog will be included in response.</td>
+				  </tr>
+				  <tr>
+					<td>raw</td>
+					<td>
+					  <strong>src / html</strong>
+					</td>
+					<td>No</td>
+					<td>The output format, as url or html img tag. By default -- JSON.</td>
+				  </tr>
+				  </tbody>
+				</table>
+				</div>
+				<div class="span8">
+				<h3>Example: <small>This'll return you json data for random old poodle with random name.</small></h3>
+                    <pre class="prettyprint linenums"><a href="http://dogsapi-fakeburst.rhcloud.com/api/dog/image?breed=poodle&age=old&name=name" target="_blank">http://dogsapi-fakeburst.rhcloud.com/api/dog/image?breed=poodle&age=old&name=name</a></pre>
+				</div>
+			</div>
+                
+                
+                
+                
+                
+                
+                
+                <hr>
+
+			</section>
+			<br>
+          <!----- images/name --->
+			<section>
+			<div class="page-header">
+			<h1>/api/dog/name<br></h1>
+			</div>
+			<h3>Parameters</h3>
+			<div class="row">
+				<div class="span8">
+				<table class="table table-bordered table-striped">
+				<thead>
+				  <tr>
+					<th>Name</th>
+					<th>Values</th>
+					<th>Required</th>
+					<th>Description</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>gender</td>
+					<td>
+					  male / female / all
+					</td>
+					<td>No</td>
+					<td>Gender of dog name to return. By default -- all.</td>
+				  </tr>
+				  </tbody>
+				</table>
+				</div>
+				<div class="span8">
+				<h3>Example: <small>This'll return you a random female dog name.</small></h3>
+				<pre class="prettyprint linenums"><a href="http://dogsapi-fakeburst.rhcloud.com/api/dog/name?gender=female" target="_blank">http://dogsapi-fakeburst.rhcloud.com/api/dog/name?gender=female</a></pre>
+				</div>
+			</div>
+
+			</section>
+			<br>
+          
+      </div>
+
+      <hr>
+        
+        
+        
+        
+        
+      </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--script src="./js/jquery.js"></script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script>
+  var refreshIntervalId
+  var loaded = true;
+  var source_url;
+  var picture_id; 
+  
+  function imageLoaded()
+  {
+clearInterval(refreshIntervalId);
+		loaded = true;
+  }
+  
+  function refreshImage()
+  {
+		$('#main_event_id').text('Finding next piccy...');
+		var image_url ='http://dogsapi-fakeburst.rhcloud.com/api/dog/image?raw=src';
+		
+		$.get(image_url, function(d){  
+  
+			$("#main_event").attr("src",d);
+            $('#main_event_source').html('<a href="'+d+'">[Source]</a>');
+});  
+  }
+  
+  $(document).ready(function()  
+      {  
+		refreshImage();
+      $('[data-toggle="popover"]').popover(); 
+  }); 
+  </script>
+  </body>
+</html>
