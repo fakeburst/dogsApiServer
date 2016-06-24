@@ -99,6 +99,67 @@
 				<h3>Example: <small>This'll return you json data for random old poodle with random name.</small></h3>
                     <pre class="prettyprint linenums"><a href="http://dogsapi-fakeburst.rhcloud.com/api/dog/image?breed=poodle&age=old&name=name" target="_blank">http://dogsapi-fakeburst.rhcloud.com/api/dog/image?breed=poodle&age=old&name=name</a></pre>
 				</div>
+                
+                <div class="span8">
+                    <h3>Create your own link!<br>
+                    <small></small></h3>
+                    <div class="row">
+                    <form role="form">
+                        <div class="form-group">
+                            <div class="col-sm-3">
+                          <label for="sel1">Select breed</label>
+                          <select class="form-control" id="breedSelect">
+                            <option>none</option>
+                            <option>poodle</option>
+                            <option>chihuahua</option>
+                            <option>german_shepherd</option>
+                              <option>akita</option>
+                            <option>labrador_retriever</option>
+                            <option>beagle</option>
+                            <option>doberman</option>
+                              <option>st_bernard</option>
+                              <option>bulldog</option>
+                            <option>tibetan_mastiff</option>
+                            <option>rough_collie</option>
+                            <option>dachshund</option>
+                              <option>siberian_husky</option>
+                          </select>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                          <label for="sel1">Select age</label>
+                          <select class="form-control" id="ageSelect">
+                            <option>none</option>
+                            <option>puppy</option>
+                            <option>young</option>
+                            <option>old</option>
+                          </select>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                          <label for="sel1">Select name</label>
+                          <select class="form-control" id="nameSelect">
+                            <option>none</option>
+                            <option>name</option>
+                          </select>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                          <label for="sel1">Select raw</label>
+                          <select class="form-control" id="rawSelect">
+                            <option>none (json)</option>
+                            <option>src</option>
+                            <option>html</option>
+                          </select>
+                            </div>
+                        </div>
+                      </form>
+                    </div>
+                    <!--p><a class="btn btn-primary" onclick="generateImageLink();">Generate</a></p-->
+                    <pre class="prettyprint linenums"><a href="http://dogsapi-fakeburst.rhcloud.com/api/dog/image" target="_blank" id="createImageLink">http://dogsapi-fakeburst.rhcloud.com/api/dog/image</a></pre>
+                    
+                </div>
+                
 			</div>
                 
                 
@@ -110,7 +171,6 @@
                 <hr>
 
 			</section>
-			<br>
           <!----- images/name --->
 			<section>
 			<div class="page-header">
@@ -144,10 +204,37 @@
 				<h3>Example: <small>This'll return you a random female dog name.</small></h3>
 				<pre class="prettyprint linenums"><a href="http://dogsapi-fakeburst.rhcloud.com/api/dog/name?gender=female" target="_blank">http://dogsapi-fakeburst.rhcloud.com/api/dog/name?gender=female</a></pre>
 				</div>
+                
+                <div class="span8">
+                    <h3>Create your own link!<br>
+                    <small></small></h3>
+                    <div class="row">
+                    <form role="form">
+                        <div class="form-group">                            
+                            <div class="col-sm-3">
+                          <label for="sel1">Select raw</label>
+                          <select class="form-control" id="genderSelect">
+                            <option>none</option>
+                            <option>all</option>
+                            <option>male</option>
+                              <option>female</option>
+                          </select>
+                            </div>
+                        </div>
+                      </form>
+                    </div>
+                    
+                    <!--p><a class="btn btn-primary" onclick="generateNameLink();">Generate</a></p-->
+                    <pre class="prettyprint linenums"><a href="http://dogsapi-fakeburst.rhcloud.com/api/dog/name" target="_blank" id="createNameLink">http://dogsapi-fakeburst.rhcloud.com/api/dog/name</a></pre>
+                </div>
+                
+                
 			</div>
 
 			</section>
-			<br>
+
+          
+          
           
       </div>
 
@@ -171,15 +258,58 @@
   var source_url;
   var picture_id; 
   
+    function generateImageLink()
+  {      
+      var res_url="http://dogsapi-fakeburst.rhcloud.com/api/dog/image?"+($("#breedSelect option:selected").text() == "none"?"":("breed="+$("#breedSelect option:selected").text()+"&"))+($("#ageSelect option:selected").text() == "none"?"":("age="+$("#ageSelect option:selected").text()+"&"))+($("#nameSelect option:selected").text() == "none"?"":("name="+$("#nameSelect option:selected").text()+"&"))+($("#rawSelect option:selected").text() == "none (json)"?"":("raw="+$("#rawSelect option:selected").text()));
+      
+      $("#createImageLink").attr("href",res_url);
+      $("#createImageLink").html(res_url);
+      
+  }
+      
+      function generateNameLink()
+  {
+        
+      var res_url="http://dogsapi-fakeburst.rhcloud.com/api/dog/name?"+($("#genderSelect option:selected").text() == "none"?"":("gender="+$("#genderSelect option:selected").text()));
+      
+      $("#createNameLink").attr("href",res_url);
+      $("#createNameLink").html(res_url);
+      
+  }
+      
   function imageLoaded()
   {
 clearInterval(refreshIntervalId);
 		loaded = true;
   }
   
+$('#breedSelect').change(function () {
+
+    generateImageLink();
+});
+      
+      $('#ageSelect').change(function () {
+
+    generateImageLink();
+});
+      
+      $('#nameSelect').change(function () {
+
+    generateImageLink();
+});
+      
+      $('#rawSelect').change(function () {
+
+    generateImageLink();
+});
+      
+      $('#genderSelect').change(function () {
+
+    generateNameLink();
+});
+      
   function refreshImage()
   {
-		$('#main_event_id').text('Finding next piccy...');
 		var image_url ='http://dogsapi-fakeburst.rhcloud.com/api/dog/image?raw=src';
 		
 		$.get(image_url, function(d){  
